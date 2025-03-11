@@ -13,7 +13,7 @@ if ! grep -q "figlet -f slant" "$bash_profile_path"; then
 if ! command_exists figlet; then
     echo "figlet is not installed. Installing figlet..."
     if command_exists apt; then
-        sudo apt install -y figlet
+        sudo apt-get install -y figlet
     elif command_exists brew; then
         brew install figlet
     elif command_exists yum; then
@@ -29,7 +29,7 @@ fi
 if ! command_exists lolcat; then
     echo "lolcat is not installed. Installing lolcat..."
     if command_exists apt; then
-        sudo apt install -y lolcat
+        sudo apt-get install -y lolcat
     elif command_exists brew; then
         brew install lolcat
     elif command_exists yum; then
