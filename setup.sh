@@ -18,7 +18,7 @@ if ! grep -q "figlet -f slant" "$bash_profile_path"; then
 #         brew install figlet
 #     elif command_exists yum; then
 #         sudo yum install -y epel-release
-#         sudo yum install -y figlet
+#         sudo yum install figlet -y
 #     else
 #         echo "Unsupported package manager. Please install figlet manually."
 #         exit 1
