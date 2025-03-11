@@ -6,6 +6,45 @@ if ! grep -q "figlet -f slant" "$bash_profile_path"; then
     echo "Adding welcome message to $bash_profile_path..."
     cat <<EOF >> "$bash_profile_path"
 
+
+
+
+# Install figlet if not installed
+if ! command_exists figlet; then
+    echo "figlet is not installed. Installing figlet..."
+    if command_exists apt; then
+        sudo apt install -y figlet
+    elif command_exists brew; then
+        brew install figlet
+    elif command_exists yum; then
+        sudo yum install -y epel-release
+        sudo yum install -y figlet
+    else
+        echo "Unsupported package manager. Please install figlet manually."
+        exit 1
+    fi
+fi
+
+# Install lolcat if not installed
+if ! command_exists lolcat; then
+    echo "lolcat is not installed. Installing lolcat..."
+    if command_exists apt; then
+        sudo apt install -y lolcat
+    elif command_exists brew; then
+        brew install lolcat
+    elif command_exists yum; then
+        sudo yum install -y ruby
+        sudo gem install lolcat
+        echo "Gems are installing......"
+    else
+        echo "Unsupported package manager. Please install lolcat manually."
+        exit 1
+    fi
+
+
+
+
+
 # Personalized Welcome Message
 echo "Welcome to the Server"
 echo "Enter Your Name: "
@@ -33,4 +72,4 @@ echo "                         +=================+
                          +=================+                                                          
                   "
 echo " Done "
-cd "$HOME"
+cd ..
