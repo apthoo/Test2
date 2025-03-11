@@ -7,7 +7,7 @@ if ! grep -q "figlet -f slant" "$bash_profile_path"; then
     cat <<EOF >> "$bash_profile_path"
 
 # Personalized Welcome Message
-echo "Welcome to the Terminal"
+echo "Welcome to the Server"
 echo "Enter Your Name: "
 read -r name
 echo -e '\e[31m'
@@ -32,3 +32,5 @@ echo "                         +=================+
                          |+-+-+-+-+-+-+-+-+|
                          +=================+                                                          
                   "
+echo " Done "
+echo exit
