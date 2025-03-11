@@ -22,3 +22,13 @@ fi
 
 # Reload .bash_profile to apply changes
 source "$bash_profile_path"
+
+echo "Setup complete! Please restart your terminal to see the changes."
+echo -e "\e[31m"
+
+echo "                         +=================+
+                         |+-+-+-+-+-+-+-+-+|
+        Team: >>>>       ||P|y|t|h|o|m|a|s||
+                         |+-+-+-+-+-+-+-+-+|
+                         +=================+                                                          
+                  "
